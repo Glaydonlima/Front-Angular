@@ -1,0 +1,30 @@
+<app-default-login-layout
+    title="Logue sua conta"
+    primaryBtnText="Login"
+    secondaryBtnText="Cadastre-se"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid"
+
+>
+    <form [formGroup]="loginForm">
+        <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="eventhub@email.com"
+        >
+        <img src="/assets/svg/email-icon.svg">
+        </app-primary-input>
+        <app-primary-input
+        formControlName="senha"
+        inputName="senha"
+        type="senha"
+        label="Sua senha"
+        >
+        <img src="/assets/svg/password-icon.svg">
+        </app-primary-input>
+        <span>Esqueceu a senha?</span>
+    </form>
+</app-default-login-layout>

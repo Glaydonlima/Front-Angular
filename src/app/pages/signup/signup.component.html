@@ -1,0 +1,48 @@
+<app-default-login-layout
+    title="Cadastre-se e comece a navegar!"
+    primaryBtnText="Cadastre-se"
+    secondaryBtnText="Login"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+
+>
+    <form [formGroup]="signupForm">
+        <app-primary-input
+        formControlName="nome"
+        inputName="nome"
+        type="text"
+        label="Seu nome"
+        placeholder="João da silva"
+        >
+        <img src="/assets/svg/email-icon.svg">
+        </app-primary-input>
+
+
+        <app-primary-input
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="eventhub@email.com"
+        >
+        <img src="/assets/svg/email-icon.svg">
+        </app-primary-input>
+        <app-primary-input
+        formControlName="senha"
+        inputName="senha"
+        type="senha"
+        label="Sua senha"
+        >
+        <img src="/assets/svg/password-icon.svg">
+        </app-primary-input>
+        <app-primary-input
+        formControlName="confirmarSenha"
+        inputName="confirmarSenha"
+        type="senha"
+        label="Confirme sua senha"
+        >
+        <img src="/assets/svg/password-icon.svg">
+        </app-primary-input>
+    </form>
+</app-default-login-layout>
